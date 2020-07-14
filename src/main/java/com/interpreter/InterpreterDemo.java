@@ -11,12 +11,14 @@ public class InterpreterDemo {
         Expression alternation2 = new OrExpression(terminal1, alternation1);
 
 
-        return terminal1;
+        return new AndExpression(terminal3, alternation2);
     }
 
     public static void main(String[] args){
         String context = "Lions";
         //String context = "Tigers";
+        //String context = "Tigers Bears";
+        //String context = "Lions Bears";
 
         Expression define = buildInterpreterTree();
 
