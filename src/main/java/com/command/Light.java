@@ -1,9 +1,12 @@
 package main.java.com.command;
 
-public class Ligth {
+public class Light {
 
     private boolean isOn = false;
 
+    public boolean isOn(){
+        return isOn;
+    }
     public void toggle(){
         if (isOn){
             off();
@@ -16,10 +19,10 @@ public class Ligth {
     }
 
     public void on(){
-        System.out.println("Ligth witched on.");
+        System.out.println("Light witched on.");
     }
 
     public void off(){
-        System.out.println("Ligth witched off.");
+        System.out.println("Light witched off.");
     }
 }

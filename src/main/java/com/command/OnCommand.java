@@ -4,14 +4,14 @@ package main.java.com.command;
 //concrete command
 public class OnCommand implements Command {
 
-    private Ligth ligth;
+    private Light light;
 
-    public OnCommand(Ligth ligth) {
-        this.ligth = ligth;
+    public OnCommand(Light light) {
+        this.light = light;
     }
 
     @Override
     public void execute() {
-        ligth.on();
+        light.on();
     }
 }
