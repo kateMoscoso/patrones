@@ -5,9 +5,10 @@ public class CommandDemo {
         Ligth  ligth = new Ligth();
         Switch ligthSwitch = new Switch();
 
-        Command onCommand = new OnCommand(ligth);
+        Command toggleCommand = new ToggleCommand(ligth);
 
-        ligthSwitch.storeAndExecute(onCommand);
-
+        ligthSwitch.storeAndExecute(toggleCommand);
+        ligthSwitch.storeAndExecute(toggleCommand);
+        ligthSwitch.storeAndExecute(toggleCommand);
     }
 }
