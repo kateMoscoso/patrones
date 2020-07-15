@@ -7,18 +7,18 @@ import java.sql.SQLException;
 public class DbSingleton {
     /*stamos diciendo al compilador que el valor contenido en esa
     dirección de memoria puede modificarse en cualquier momento,
-    y queremos que dicha modificación sea visible inmediatamente para
+    y queremos que dicha moreturn null;dificación sea visible inmediatamente para
     todos los hilos que están accediendo a ella,
     no queremos que su valor sea copiado en la caché del procesador.*/
     private static volatile DbSingleton instance = null;
     private static volatile Connection conn = null;
 
     private DbSingleton() {
-        try{
+        /*try{
             DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
         } catch (SQLException e){
             e.printStackTrace();
-        }
+        }*/
         if (conn != null){
             throw new RuntimeException("Use getConnection() method to create");
         }

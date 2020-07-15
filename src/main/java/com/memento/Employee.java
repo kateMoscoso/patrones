@@ -3,8 +3,7 @@ package main.java.com.memento;
 import java.io.Serializable;
 
 //originator
-@SuppressWarnings("serial")
-public class Employee implements Serializable {
+public class Employee {
     private String name;
     private String address;
     private String phone;
@@ -33,6 +32,12 @@ public class Employee implements Serializable {
         this.phone = phone;
     }
 
-    public Employee() {
+    public EmployeeMemento save() {
+        return new EmployeeMemento(name, phone);
+    }
+
+    public void revert(EmployeeMemento emp){
+        this.name = emp.getName();
+        this.phone = emp.getPhone();
     }
 }
