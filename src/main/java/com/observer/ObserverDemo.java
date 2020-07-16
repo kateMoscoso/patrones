@@ -5,9 +5,9 @@ public class ObserverDemo {
         Subject subject = new MessageStream();
 
         PhoneClient phoneClient = new PhoneClient(subject);
-        //TableClient tableClient = new TableClient(subject);
+        TabletClient tabletClient = new TabletClient(subject);
 
         phoneClient.addMessage("Here is a new message!");
-        //tobletClient.addMessage("Another new message!");
+        tabletClient.addMessage("Another new message!");
     }
 }
