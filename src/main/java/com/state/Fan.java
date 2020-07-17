@@ -4,13 +4,16 @@ public class Fan {
     State fanOffState;
     State fanLowState;
     State fanMedState;
+    State fanHighState;
 
     State state ;
+
 
     public Fan(){
         fanOffState = new FanOffState(this);
         fanLowState = new FanLowState(this);
         fanMedState = new FanMedState(this);
+        fanHighState = new FanHighState(this);
 
         state = fanOffState;
     }
@@ -28,7 +31,7 @@ public class Fan {
     }
 
     public State getFanLowState() {
-        return fanOffState;
+        return fanLowState;
     }
 
     public State getFanMedState() {
@@ -38,4 +41,9 @@ public class Fan {
     public State getFanOffState() {
         return fanOffState;
     }
+
+    public State getFanHighState() {
+        return fanHighState;
+    }
+
 }

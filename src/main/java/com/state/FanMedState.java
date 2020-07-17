@@ -7,8 +7,8 @@ public class FanMedState extends State {
         this.fan = fan;
     }
     public void handleRequest(){
-        System.out.println("Turning fan on to off");
-        fan.setState(fan.getFanOffState());
+        System.out.println("Turning fan on to high");
+        fan.setState(fan.getFanHighState());
     }
 
     public String toString(){
