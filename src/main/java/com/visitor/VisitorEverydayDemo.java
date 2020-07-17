@@ -8,6 +8,6 @@ public class VisitorEverydayDemo {
         order.addPart(new Oil());
 
         order.accept(new AtvPartsShippingVisitor());
-
+        order.accept(new AtvPartsDisplayVisitor());
     }
 }
