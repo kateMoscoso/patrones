@@ -7,8 +7,7 @@ public class VisitorEverydayDemo {
         order.addPart(new Fender());
         order.addPart(new Oil());
 
-        double shippingCost = order.calculateShipping();
+        order.accept(new AtvPartsShippingVisitor());
 
-        System.out.println(shippingCost);
     }
 }

@@ -17,11 +17,11 @@ public class PartsOrder implements AtvPart {
         return Collections.unmodifiableList(parts);
     }
 
-    public double calculateShipping(){
-        double shippingCost = 0;
+    @Override
+    public void accept(AtvPartVisitor visitor) {
         for (AtvPart atvPart: parts) {
-            shippingCost += atvPart.calculateShipping();
+            atvPart.accept(visitor);
         }
-        return shippingCost;
+        visitor.visit(this);
     }
 }

@@ -2,7 +2,7 @@ package main.java.com.visitor;
 
 public class Fender implements AtvPart {
     @Override
-    public double calculateShipping() {
-        return 3;
+    public void accept(AtvPartVisitor visitor) {
+        visitor.visit(this);
     }
 }
